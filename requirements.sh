@@ -17,5 +17,7 @@ pip install Adafruit_BBIO
 git clone https://github.com/adafruit/Adafruit_Python_BME280.git
 cd Adafruit_Python_BME280
 sudo python setup.py install
-cd ..
+
+#going back up
+cd ../..
 
