@@ -17,4 +17,3 @@ if __name__ == "__main__":
     data = {"temperature":degrees,"pressure":pascals,"humidity":humidity}
 
     response = requests.post("http://poems.calit2.uci.edu/poems/Zigbee")
-
