@@ -1,5 +1,4 @@
-mkdir lib
-cd lib
+
 sudo apt-get install python-dev  # for python2.x installs
 
 #Adafruit GPIO https://github.com/adafruit/Adafruit_Python_GPIO
@@ -23,6 +22,6 @@ cd Adafruit_Python_BME280
 sudo python setup.py install
 cd ..
 
-#going back up
-cd ../..
+#installing requests
+pip install requests
 
