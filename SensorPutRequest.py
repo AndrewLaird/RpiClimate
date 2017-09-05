@@ -24,7 +24,7 @@ def main():
 
     mac = getMAC(interface='wlan0')
 
-    data = '{"temperature":degrees,"pressure":pascals,"humidity":humidity,"MAC":mac}'
+    data = '{"temperature":'+str(degrees)+',"pressure":'+str(pascals)+',"humidity":'+str(humidity)+',"MAC":'+str(mac)+'}'
     print(data)
     response = requests.put("http://poems.calit2.uci.edu/poems/sensor_input",data=data)
     print(response)
