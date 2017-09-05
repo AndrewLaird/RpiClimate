@@ -31,6 +31,7 @@ def main():
     response = requests.put("http://poems.calit2.uci.edu/poems/sensor_input",data=data)
     print(response)
     return (response)
-import time
+
+
 if __name__ == "__main__":
     main()
