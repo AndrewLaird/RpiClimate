@@ -1,4 +1,22 @@
-sudo easy_install pip #pip installer
+#create a virtual env and put yourself in it
+sudo apt-get install python-pip
+
+sudo pip install virtualenv
+
+mkdir ~/.virtualenvs
+
+sudo pip install virtualenvwrapper
+export WORKON_HOME=~/.virtualenvs
+
+. /usr/local/bin/virtualenvwrapper.sh
+source .bashrc
+
+mkvirtualenv sensor
+
+workon sensor
+
+#sudo easy_install pip #pip installer
+
 
 sudo apt-get install python-dev  # for python2.x installs
 
