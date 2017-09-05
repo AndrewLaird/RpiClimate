@@ -1,3 +1,4 @@
+sudo easy_install pip #pip installer
 
 sudo apt-get install python-dev  # for python2.x installs
 

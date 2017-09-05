@@ -26,7 +26,7 @@ def main():
 
     data = {"temperature":degrees,"pressure":pascals,"humidity":humidity,"MAC":mac}
     print(data)
-    response = requests.post("http://poems.calit2.uci.edu/poems/sensor_input",data=data)
+    response = requests.put("http://poems.calit2.uci.edu/poems/sensor_input",data=data)
     print(response)
     return (response)
 import time
