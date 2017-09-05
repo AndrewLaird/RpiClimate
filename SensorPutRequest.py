@@ -2,6 +2,7 @@
 #import Adafruit_BBIO.GPIO as GPIO
 from Adafruit_BME280 import *
 import requests
+import json
 
 
 
@@ -24,7 +25,8 @@ def main():
 
     mac = getMAC(interface='wlan0')
 
-    data = '{"temperature":'+str(degrees)+',"pressure":'+str(pascals)+',"humidity":'+str(humidity)+',"MAC":'+str(mac)+'}'
+    data = {"temperature":degrees,"pressure":pascals,"humidity":humidity,"MAC":mac}
+    data = json.dumps(data)
     print(data)
     response = requests.put("http://poems.calit2.uci.edu/poems/sensor_input",data=data)
     print(response)
