@@ -1,6 +1,6 @@
 #import RPi.GPIO as GPIO
 #import Adafruit_BBIO.GPIO as GPIO
-from lib.Adafruit_BME280 import *
+from Adafruit_BME280 import *
 import requests
 
 
