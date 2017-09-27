@@ -29,7 +29,7 @@ def main():
     data = json.dumps(data)
     print(data)
     response = requests.put("http://poems.calit2.uci.edu/poems/sensor_input",data=data)
-    print(response)
+    response.close()
     return (response)
 
 
