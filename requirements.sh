@@ -27,3 +27,4 @@ cd ..
 #installing requests
 pip install requests
 
+echo "\n\nYou Must enable I2C\nrun sudo raspi-config"
