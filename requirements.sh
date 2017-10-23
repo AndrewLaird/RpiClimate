@@ -28,3 +28,4 @@ cd ..
 pip install requests
 
 echo "\n\nYou Must enable I2C\nrun sudo raspi-config"
+echo "Also setup ssh in the same way"

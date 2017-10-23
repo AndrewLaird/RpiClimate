@@ -3,7 +3,7 @@
 from Adafruit_BME280 import *
 import requests
 import json
-
+import hashlib
 
 
 def getMAC(interface='wlan0'):
@@ -25,10 +25,16 @@ def main():
 
     mac = getMAC(interface='wlan0')
 
-    data = {"temperature":degrees,"pressure":pascals,"humidity":humidity,"MAC":mac}
+    salt = "$2b$12$.ghDXmVfgSz9Z8u1nBaBf."
+    pi_hash = hashlib.sha256()
+    pi_hash.update(bytes(mac, 'utf-8'))
+    pi_hash.update(bytes(salt, 'utf-8'))
+    pi_hash_code = pi_hash.hexdigest()
+
+    data = {"temperature":degrees,"pressure":pascals,"humidity":humidity,"MAC":mac,"code":str(pi_hash_code)}
     data = json.dumps(data)
     print(data)
-    response = requests.put("http://poems.calit2.uci.edu/poems/sensor_input",data=data)
+    response = requests.put("https://poems.calit2.uci.edu/poems/sensor_input",data=data)
     response.close()
     return (response)
 
