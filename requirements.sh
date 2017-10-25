@@ -24,8 +24,12 @@ cd Adafruit_Python_BME280
 sudo python setup.py install
 cd ..
 
+
+#getting pipenv for requests
+pip install pipenv
+
 #installing requests
-pip install requests
+pipenv install requests
 
 echo "\n\nYou Must enable I2C\nrun sudo raspi-config"
 echo "Also setup ssh in the same way"

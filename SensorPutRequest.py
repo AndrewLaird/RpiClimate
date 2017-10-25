@@ -24,11 +24,10 @@ def main():
     humidity = sensor.read_humidity()
 
     mac = getMAC(interface='wlan0')
-
     salt = "$2b$12$.ghDXmVfgSz9Z8u1nBaBf."
     pi_hash = hashlib.sha256()
-    pi_hash.update(bytes(mac, 'utf-8'))
-    pi_hash.update(bytes(salt, 'utf-8'))
+    pi_hash.update(bytes(mac))
+    pi_hash.update(bytes(salt))
     pi_hash_code = pi_hash.hexdigest()
 
     data = {"temperature":degrees,"pressure":pascals,"humidity":humidity,"MAC":mac,"code":str(pi_hash_code)}
