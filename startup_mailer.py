@@ -27,8 +27,8 @@ def connect_type(word_list):
 # Change to your own account information
 # Account Information
 to = 'lairdandrew11@gmail.com' # Email to send to.
-gmail_user = 'lairdandrew11@gmail.com' # Email to send from. (MUST BE GMAIL)
-gmail_password = base64.b64decode('cGluaypveDE=') # Gmail password.
+gmail_user = 'INRFPI@gmail.com' # Email to send from. (MUST BE GMAIL)
+gmail_password = base64.b64decode('UGlJTlJGMjAxNw==') # Gmail password.
 smtpserver = smtplib.SMTP('smtp.gmail.com', 587) # Server to use.
 
 
