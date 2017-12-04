@@ -1,2 +1,1 @@
-cd ~/ZigbeeReplacement
-python SensorPutRequest.py
+*/15 * * * * root /home/pi/RpiClimate/sensor_run.sh
