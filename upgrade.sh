@@ -6,7 +6,7 @@ echo "result"
 echo $RESULT
 
 if [ "$RESULT" = "Sucess" ]; then
-    cp -R /home/pi/upgrade/RPiClimate /home/pi/production/RPiClimate
+    cp -R /home/pi/upgrade/RpiClimate /home/pi/production/RpiClimate
     echo "upgrade complete"
 else
     echo "up to date"
