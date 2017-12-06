@@ -54,8 +54,8 @@ print(ip_posibilities)
 
 #get the mac as well
 mac_regex_pattern = r"(?:ether|HWaddr) ((?:[^:\s]{2}:){5}[^:\s]{2})"
-mac_poosibilities = re.findall(mac_regex_pattern,output)
-mac = mac_poosibilities[0]
+mac_posibilities = re.findall(mac_regex_pattern,output)
+mac = mac_posibilities[0]
 
 #form the message
 my_ip_a = "Mac: " + mac + "\n"
