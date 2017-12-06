@@ -25,12 +25,12 @@ fi
 
 
 #run all the requiremets for the mailer and
-. /home/pi/ZigbeeReplacement/requirements.sh
+. /home/pi/RpiClimate/requirements.sh
 
 
 
 #send me the ip address
-python /home/pi/ZigbeeReplacement/startup_mailer.py
+python /home/pi/RpiClimate/startup_mailer.py
 
 
 
