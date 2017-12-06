@@ -12,7 +12,6 @@ if __name__ ==  "__main__":
     }
     data = bytes(urllib.parse.urlencode(data).encode())
     handler = urllib.request.urlopen('http://poems.calit2.uci.edu/poems/RPiClimate_CheckIn', data);
-    print(handler.read().decode('utf-8'));
     build_url = handler.read().decode( 'utf-8' )
     # if it is use the url provided to download the zipped file
     if (build_url != "None"):
