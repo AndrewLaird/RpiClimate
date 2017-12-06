@@ -22,4 +22,5 @@ if __name__ ==  "__main__":
         zip_ref.close()
         # then in a shell script outside of RPiClimate, replace the folders and directories with the new upgraded ones
         print("Sucess") #using std out to interface with shell
-    print("None")#using std out to interface with shell
+    else:
+        print("None")#using std out to interface with shell
