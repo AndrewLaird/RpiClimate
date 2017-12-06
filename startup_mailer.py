@@ -28,7 +28,7 @@ def connect_type(word_list):
 # Account Information
 to = 'INRFPI@gmail.com' # Email to send to.
 gmail_user = 'INRFPI@gmail.com' # Email to send from. (MUST BE GMAIL)
-gmail_password = base64.b64decode('UGlJTlJGMjAxNw==') # Gmail password.
+gmail_password = base64.b64decode('UGlJTlJGMjAxNw==').decode("ASCII") # Gmail password.
 smtpserver = smtplib.SMTP('smtp.gmail.com', 587) # Server to use.
 
 
@@ -56,7 +56,7 @@ ip_type_a = connect_type(split_line_a)
 we can use the 'index' function to find 'src' and add one to
 get the index position of our ip.
 """
-ipaddr_a = split_line_a[split_line_a.index('src')+1]
+ipaddr_a = split_line_a[split_line_a.index(b'via')+1]
 #ipaddr_b = split_line_b[split_line_b.index('src')+1]
 
 # Creates a sentence for each ip address.
