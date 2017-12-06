@@ -5,7 +5,7 @@ RESULT="$(python3 ~/RpiClimate/upgrade_pull.py $MAC)"
 echo $RESULT
 
 if [$RESULT=="Sucess"]; then
-    cp -R ~/upgrade/RPiClimate ~/production/RPiClimate
+    cp -R /home/pi/upgrade/RPiClimate /home/pi/production/RPiClimate
     echo "upgrade complete"
 else
     echo "up to date"
