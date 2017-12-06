@@ -2,6 +2,7 @@
 MAC="$(ifconfig -a |grep -Po "(?:ether|HWaddr) \K[^\s]*")"
 echo $MAC
 RESULT="$(python3 ~/RpiClimate/upgrade_pull.py $MAC)"
+echo "result"
 echo $RESULT
 
 if [$RESULT=="Sucess"]; then

@@ -6,7 +6,6 @@ import sys
 if __name__ ==  "__main__":
     # determine wheter an upgrade is necessary
     mac = sys.argv[1]
-    print(mac)
     build_url = "None"
     build_url = "http://poems.calit2.uci.edu/poems/RPiClimate_update/2017/11/27/RpiClimate.zip"
 
