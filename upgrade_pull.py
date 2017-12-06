@@ -1,4 +1,5 @@
 from urllib.request import urlretrieve
+import urllib.request, urllib.parse
 import zipfile
 import sys
 
@@ -6,14 +7,16 @@ import sys
 if __name__ ==  "__main__":
     # determine wheter an upgrade is necessary
     mac = sys.argv[1]
-    build_url = "None"
-    build_url = "http://poems.calit2.uci.edu/poems/RPiClimate_update/2017/11/27/RpiClimate.zip"
-
+    data = {
+        'mac': mac,
+    }
+    data = bytes(urllib.parse.urlencode(data).encode())
+    handler = urllib.request.urlopen('http://poems.calit2.uci.edu/poems/RPiClimate_CheckIn', data);
+    print(handler.read().decode('utf-8'));
+    build_url = handler.read().decode( 'utf-8' )
     # if it is use the url provided to download the zipped file
     if (build_url != "None"):
         # downloading the zipfile
-        # build = requests.urlopen(build_url)
-        # build_zip = open("/home/andrew/upgrade/build.zip","w")
         urlretrieve(build_url, "/home/pi/upgrade/build.zip")
 
         # unzip the file in a folder called upgrade
