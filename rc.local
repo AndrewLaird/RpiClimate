@@ -13,12 +13,12 @@
 # By default this script does nothing.
 
 #run all the requiremets for the mailer and
-. /home/pi/RpiClimate/requirements.sh
+#. /home/pi/RpiClimate/requirements.sh
 
 
 
 #send me the ip address
-python /home/pi/RpiClimate/startup_mailer.py
+/usr/bin/python /home/pi/RpiClimate/startup_mailer.py
 
 
 
