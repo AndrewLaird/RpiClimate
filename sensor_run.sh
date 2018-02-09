@@ -1,1 +1,1 @@
-python3 /home/pi/RpiClimate/SensorPutRequest.py
+python /home/pi/RpiClimate/SensorPutRequest.py

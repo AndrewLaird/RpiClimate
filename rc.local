@@ -12,8 +12,6 @@
 #
 # By default this script does nothing.
 
-#enable ssh
-sudo systemctl enable ssh
 
 #setup the wifi
 

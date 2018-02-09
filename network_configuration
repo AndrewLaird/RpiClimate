@@ -1,9 +1,0 @@
-#this should be located in the file /etc/wpa_supplicant/wpa_supplicant.conf (super user protected)
-country=GB
-ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
-update_config=1
-network={
-    ssid="PDS-Resident"
-    psk="AC86fm!6"
-}
-
