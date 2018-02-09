@@ -23,18 +23,17 @@ sudo git clone https://github.com/adafruit/Adafruit_Python_BME280.git
 cd Adafruit_Python_BME280
 sudo python setup.py install
 #copy all the files out of the folder
-cp * ..
+sudo cp * ..
 #exit directory
 cd ..
 
 
 
-#not using requests, instead we are using python 2.7
 #getting pipenv for requests
-#pip install pipenv
+pip install pipenv
 
 #installing requests
-#pipenv install requests
+pipenv install requests
 
 echo "\n\nYou Must enable I2C\nrun sudo raspi-config\n"
 echo "Also setup ssh in the same way"
