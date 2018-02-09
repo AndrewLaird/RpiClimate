@@ -12,16 +12,6 @@
 #
 # By default this script does nothing.
 
-
-#setup the wifi
-
-# Print the IP address
-_IP=$(hostname -I) || true
-if [ "$_IP" ]; then
-  printf "My IP address is %s\n" "$_IP"
-fi
-
-
 #run all the requiremets for the mailer and
 . /home/pi/RpiClimate/requirements.sh
 
