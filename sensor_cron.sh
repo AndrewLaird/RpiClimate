@@ -1,1 +1,1 @@
-*/15 * * * * root /home/pi/RpiClimate/sensor_run.sh
+*/5 * * * * root /home/pi/RpiClimate/sensor_run.sh
