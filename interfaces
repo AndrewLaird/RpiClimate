@@ -11,5 +11,6 @@ allow-hotplug wlan1
 iface wlan1 inet manual
     wpa-conf /etc/wpa_supplicant/wpa_supplicant.conf
 
+iface default inet dhcp
 
 #cp /home/pi/RpiClimate/interfaces /etc/network/interfaces
