@@ -33,7 +33,7 @@ cd ..
 pip install --yes pipenv
 
 #installing requests
-pipenv install --yes requests
+pipenv instal requests
 
 echo "\n\nYou Must enable I2C\nrun sudo raspi-config\n"
 echo "Also setup ssh in the same way"
