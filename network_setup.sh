@@ -1,3 +1,4 @@
+#currently the network should work without this
 
 #first change wpa_supplicant
 sudo bash -c "cat /home/pi/RpiClimate/wpa_supplicant.conf >> /etc/wpa_supplicant/wpa_supplicant.conf"

@@ -1,22 +1,16 @@
 #get pip
-sudo apt-get install python-pip
+sudo apt-get -y install python-pip
 
-sudo apt-get install python-dev  # for python2.x installs
+sudo apt-get -y install python-dev  # for python2.x installs
 
 #Adafruit GPIO https://github.com/adafruit/Adafruit_Python_GPIO
-sudo apt-get update
-sudo apt-get install build-essential python-pip python-dev python-smbus gitdzgasdffadsf
+sudo apt-get -y update
+sudo apt-get -y install build-essential python-pip python-dev python-smbus gitdzgasdffadsf
 sudo git clone https://github.com/adafruit/Adafruit_Python_GPIO.git
 cd Adafruit_Python_GPIO
 sudo python setup.py install
 pip install Adafruit_GPIO
 cd ..
-
-
-#beaglebone
-#/usr/bin/ntpdate -b -s -u pool.ntp.org
-#opkg update && opkg install python-pip python-setuptools
-#pip install Adafruit_BBIO
 
 #getting the BME Library
 sudo git clone https://github.com/adafruit/Adafruit_Python_BME280.git
@@ -30,10 +24,14 @@ cd ..
 
 
 #getting pipenv for requests
-pip install --yes pipenv
+pip install pipenv
 
 #installing requests
-pipenv instal requests
+#pipenv install requests
 
-echo "\n\nYou Must enable I2C\nrun sudo raspi-config\n"
+#setup cron
+. cron_setup.sh
+
+echo "You Must enable I2C"
+echo "run sudo raspi-config"
 echo "Also setup ssh in the same way"
