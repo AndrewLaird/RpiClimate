@@ -23,7 +23,7 @@ def main():
     hectopascals = pascals / 100
     humidity = sensor.read_humidity()
 
-    mac = getMAC(interface='wlan0')
+    mac = getMAC(interface='eth0')
     salt = "$2b$12$.ghDXmVfgSz9Z8u1nBaBf."
     pi_hash = hashlib.sha256()
     pi_hash.update(bytes(mac))
