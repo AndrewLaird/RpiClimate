@@ -13,6 +13,6 @@ PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
 47 6    * * 7   root    test -x /usr/sbin/anacron || ( cd / && run-parts --repo$
 52 6    1 * *   root    test -x /usr/sbin/anacron || ( cd / && run-parts --repo$
 #runs sensor ever 5 min
-*/5 * * * * root /usr/bin/python /home/pi/RpiClimate/SensorPutRequest.py
+*/5 * * * * pi /usr/bin/python /home/pi/RpiClimate/SensorPutRequest.py
 #upgrades every midnight
-0 0 * * * root /home/pi/RpiClimate/upgrade.sh
+0 0 * * * pi /home/pi/RpiClimate/upgrade.sh
