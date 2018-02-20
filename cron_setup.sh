@@ -1,3 +1,3 @@
 #add to the crontab
-#this should only be run on intial startup
-sudo bash -c "echo \"*/15 * * * * root /usr/bin/python /home/pi/RpiClimate/SensorPutRequest.py\" >> /etc/crontab"
+#this will replace the crontab file with this one
+sudo bash -c "cat crontab_replace.txt > /etc/crontab"
