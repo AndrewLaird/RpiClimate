@@ -12,9 +12,10 @@ if __name__ ==  "__main__":
     }
     data = bytes(urllib.parse.urlencode(data).encode())
     handler = urllib.request.urlopen('http://poems.calit2.uci.edu/poems/RPiClimate_CheckIn', data);
+    status = handler.getcode()
     build_url = handler.read().decode( 'utf-8' )
     # if it is use the url provided to download the zipped file
-    if (build_url != "None"):
+    if (status == 200):
         # downloading the zipfile
         urlretrieve(build_url, "/home/pi/upgrade/build.zip")
 
