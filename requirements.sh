@@ -32,6 +32,9 @@ pipenv install requests
 #setup cron
 . cron_setup.sh
 
+#making sure there is a directory for upgrading
+mkdir /home/pi/upgrade
+
 echo "You Must enable I2C"
 echo "run sudo raspi-config"
 echo "Also setup ssh in the same way"
