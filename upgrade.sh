@@ -7,6 +7,7 @@ echo $RESULT
 
 if [ "$RESULT" = "Sucess" ]; then
     sudo cp -R /home/pi/upgrade/RpiClimate /home/pi/
+    . /home/pi/RpiClimate/requirements.txt
     echo "upgrade complete"
 else
     echo "up to date"
