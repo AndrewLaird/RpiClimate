@@ -1,5 +1,5 @@
 #this file takes the directory in side of ~/upgrade and replaces everything in RPiClimate with its new copy
-MAC="$(ifconfig -a |grep -Po "(?:ether|HWaddr) \K[^\s]*")"
+MAC="$(ifconfig -a |grep -Po "(?:ether|HWaddr) \K[^\s]*" | head -1)"
 echo $MAC
 RESULT="$(python3 ~/RpiClimate/upgrade_pull.py $MAC)"
 echo "result"
