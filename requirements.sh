@@ -27,7 +27,7 @@ cd ..
 pip install pipenv
 
 #installing requests
-#pipenv install requests
+pipenv install requests
 
 #setup cron
 . cron_setup.sh
